@@ -11,7 +11,7 @@ Saldo = 0
 limite = 500
 Extrato = ""
 numeros_saques = 0
-limite_SAQUES = 3
+limite_saques = 3
 
 while True:
 
@@ -30,19 +30,21 @@ while True:
             print("Você não inseriu os dados corretamente.")
 
     elif opcao == 's':
-        if (numeros_saques =< 3):
+        if numeros_saques != 3:
             user = input('Digite um quantia para sacar: ')
             saqueUser = float(user)
             if saqueUser > 500.00:
                print('Digite um valor inferior ao limite.')
-            elif saqueUser =< 0:
+            elif saqueUser <= 0:
                print('Você digitou um valor inferior ou igual a zero.')
             elif saqueUser > Saldo: 
                print('Você não possui essa quantia em sua conta')
-            eles:
-               print(f'Você realizou um saque na quantia de {saqueUser})
-               saldo+=saqueUser
-               contador++
+            else:
+               numeros_saques += 1
+               print(f'Você realizou um saque na quantia de {saqueUser}')
+               Saldo -= saqueUser
+        else:
+            print('Você atingiu a quantidade máxima de realizações de saques diários. Tente novamente amanhã.')
     elif opcao == 'e':
         ...
     elif opcao == 'q':
@@ -50,6 +52,5 @@ while True:
     else:
         print('Por favor, digite uma opção válida.')
         continue
-
 
 
