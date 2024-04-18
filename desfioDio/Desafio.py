@@ -30,9 +30,19 @@ while True:
             print("Você não inseriu os dados corretamente.")
 
     elif opcao == 's':
-        if (numeros_saques < 3):
-            user = input('')
-            if 
+        if (numeros_saques =< 3):
+            user = input('Digite um quantia para sacar: ')
+            saqueUser = float(user)
+            if saqueUser > 500.00:
+               print('Digite um valor inferior ao limite.')
+            elif saqueUser =< 0:
+               print('Você digitou um valor inferior ou igual a zero.')
+            elif saqueUser > Saldo: 
+               print('Você não possui essa quantia em sua conta')
+            eles:
+               print(f'Você realizou um saque na quantia de {saqueUser})
+               saldo+=saqueUser
+               contador++
     elif opcao == 'e':
         ...
     elif opcao == 'q':
@@ -40,4 +50,6 @@ while True:
     else:
         print('Por favor, digite uma opção válida.')
         continue
+
+
 
