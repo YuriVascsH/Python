@@ -22,7 +22,7 @@ while True:
         if valor_usuario > 0:
             print(f"O valor de {valor_usuario} foi depositado em sua conta.")
             Saldo += valor_usuario
-            Extrato += f'Depósito de {valor_usuario:.2f}'
+            Extrato += f'Depósito de {valor_usuario:.2f}\n'
         elif (valor_usuario <= 0 ):
             print('Valor inferior ou igual a zero.')
         else:
@@ -45,7 +45,7 @@ while True:
                 numeros_saques += 1
                 print(f'saque de R${saqueUser:.2f}')
                 Saldo -= saqueUser
-                Extrato += f'Saque de: R${saqueUser}' 
+                Extrato += f'Saque de: R${saqueUser}\n' 
         else:
             print('Você atingiu a quantidade máxima de realizações de saques diários. Tente novamente amanhã.')
 
