@@ -31,7 +31,7 @@ while True:
     elif opcao == 's':
         if Saldo <= 0:
             print('Não é possível realizar um saque porque o saldo da sua conta é zero.')
-        elif numeros_saques >= limite_saques:
+        elif numeros_saques != limite_saques:
             user = input('Digite um quantia para sacar: ')
             saqueUser = float(user)
 
